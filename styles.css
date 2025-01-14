@@ -22,6 +22,10 @@ footer {
   padding-left: 15px;
 }
 
+footer a:visited {
+  color: rgb(148, 161, 189);
+}
+
 .main-content {
   display: flex;
   align-items: center;
@@ -47,11 +51,11 @@ footer {
 
 .links {
   width: 450px;
-  margin-top: 15rem;
+  margin-top: 5rem;
   font-size: 20px;
   text-align: center;
-  font-family: Helvetica, sans-serif;
-  font-weight: 500;
+  font-family: Inter, Helvetica, sans-serif;
+  font-weight: 600;
 }
 
 .yt-link {
@@ -93,22 +97,22 @@ footer {
 /* Animations! */
 
 .header {
-  animation: 1.5s fadeInUp forwards;
+  animation: 0.6s fadeInUp forwards;
 }
 
 .summary-content {
   opacity: 0;
-  animation: 1.5s 0.5s fadeInDown forwards;
+  animation: 0.6s 0.1s fadeInDown forwards;
 }
 
 .links {
   opacity: 0;
-  animation: 1.5s 1.6s fadeInDown forwards;
+  animation: 0.6s 0.2s fadeInDown forwards;
 }
 
 footer {
   opacity: 0;
-  animation: 1.5s 1.8s fadeInDown forwards;
+  animation: 0.6s 0.4s fadeInDown forwards;
 }
 
 /* original code taken from a dev.to post by tia eastwood */
@@ -142,5 +146,40 @@ footer {
   100% {
     transform: translateX(0%);
     opacity: 1;
+  }
+}
+
+/* Mobile Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .header {
+    font-size: 3.5rem;
+  }
+
+  .summary-content {
+    font-size: 20px;
+    width: 300px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .links {
+    margin-top: 100px;
+    width: 350px;
+  }
+
+  footer {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    font-size: 3.2rem;
   }
 }
